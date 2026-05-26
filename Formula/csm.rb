@@ -1,32 +1,31 @@
 class Csm < Formula
-  desc "Claude Code + Codex session manager TUI"
+  desc "TUI session manager for Claude Code + Codex"
   homepage "https://github.com/welcomra1n/session-manager-tui"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.1.0/csm-darwin-arm64"
-      sha256 "945429b20c205d2d4ac8016aefc9fefc38695a674aa25431dafa28e56b61c35d"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.2.0/csm-darwin-arm64"
+      sha256 "ff7271798a1a0f6e744afd1f7074304608eccd5ef7786be9617e5ab1161fd843"
     else
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.1.0/csm-darwin-amd64"
-      sha256 "5aa2b240ae9d1fb1724647f989a62c0b3b577ee17941bd2c5a45517c02e0c273"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.2.0/csm-darwin-amd64"
+      sha256 "bd2403a43540d7ccf5750ff99d9ed11310389dea90361cff43866b037348b4b3"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.1.0/csm-linux-arm64"
-      sha256 "9f796367cc01c6bb28fd1fd7eb8c0d64cb4597fe6447d094b698add1cfd59c70"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.2.0/csm-linux-arm64"
+      sha256 "15575f4965018812a8060f5b5a0457cf40878798701f0968871d56d81d596e80"
     else
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.1.0/csm-linux-amd64"
-      sha256 "096e41c2ab779630c97da5e6a777c73f56467b2e0bc888bc4ff59c0f41d42cd6"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.2.0/csm-linux-amd64"
+      sha256 "d66eba740189a863e4edf46dab1e9eb6d0b8c56cf0df4404f04dcb475da02077"
     end
   end
 
   def install
-    binary = Dir["csm-*"].first || "csm"
-    bin.install binary => "csm"
+    bin.install Dir.glob("csm-*").first => "csm"
   end
 
   test do
