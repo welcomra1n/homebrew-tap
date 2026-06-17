@@ -1,26 +1,26 @@
 class Csm < Formula
   desc "TUI session manager for Claude Code + Codex"
   homepage "https://github.com/welcomra1n/session-manager-tui"
-  version "0.3.7"
+  version "0.3.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.7/csm-darwin-arm64"
-      sha256 "05051d0809fe0afff9733db4e3e6afa59c8de5d5bbe38d93675f816db9577b36"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.8/csm-darwin-arm64"
+      sha256 "a31da08d0a56ebcce2eb2ba1d685330a423d629fcee1a1aa337f703b9ac6c36f"
     else
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.7/csm-darwin-amd64"
-      sha256 "78a7239954e9cadbce9ec8e740fceeb276983bc8c08d8fa961629823f38fb95b"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.8/csm-darwin-amd64"
+      sha256 "4dd6099ec500fb67e235fa383faa21580507f341cd279cb4d0c577134a0f4fe6"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.7/csm-linux-arm64"
-      sha256 "a3ef1a4838a748e4edced9b7dc84e32a1469fd3519c272beb2e8c6341a294479"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.8/csm-linux-arm64"
+      sha256 "bab4db1caee2f6ca1e65aca1e6d59c62dcef6b577a189d18a33c7016480bc46e"
     else
-      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.7/csm-linux-amd64"
-      sha256 "b6407f52d226becdd827225f45ce74dc9189183ceb465014f814fa8899fd2540"
+      url "https://github.com/welcomra1n/session-manager-tui/releases/download/v0.3.8/csm-linux-amd64"
+      sha256 "22b630892f31429e991fa7dfc4e51feecc29c2da705ec90e6be32dc5efd53fec"
     end
   end
 
