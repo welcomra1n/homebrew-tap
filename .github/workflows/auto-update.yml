@@ -58,6 +58,8 @@ jobs:
 
           sed -i -E "s/^( *version )\"[^\"]+\"/\\1\"${VERSION}\"/" Formula/csm.rb
 
+          export VERSION SHA_darwin_arm64 SHA_darwin_amd64 SHA_linux_arm64 SHA_linux_amd64
+
           # Replace each sha256 by matching the URL line right above it
           python3 - <<PY
           import re, os
@@ -81,8 +83,6 @@ jobs:
               f.write(text)
           PY
           echo "csm updated to $VERSION"
-        env:
-          VERSION: ${{ env.VERSION }}
 
       - name: Commit and push
         run: |
