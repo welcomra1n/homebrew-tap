@@ -1,6 +1,6 @@
 cask "csm-gui" do
-  version "0.9.35"
-  sha256 "096d12a3ac0d8eca631b4bd8c06e8b71330311ea726f78ee7e9c28162b460e6a"
+  version "0.9.36"
+  sha256 "a4c7be924144307b7199789b4b1981d5ef4800b7579b42caf6dae35042508cc0"
 
   url "https://github.com/welcomra1n/csm-gui/releases/download/v#{version}/csm-gui-darwin.zip"
   name "csm GUI"
